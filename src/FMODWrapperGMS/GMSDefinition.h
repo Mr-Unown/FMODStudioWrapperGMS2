@@ -3,9 +3,9 @@
 #define GM_FUNC extern "C" __declspec (dllexport)
 
 // GM Constants
-constexpr unsigned int GM_true() { return 1; }
-constexpr unsigned int GM_false() { return 0; }
-constexpr unsigned int GM_error() { return -1; }
+constexpr double GM_true() { return 1.0; }
+constexpr double GM_false() { return 0.0; }
+constexpr double GM_error() { return -1.0; }
 
 // GM Instance Constants
-constexpr unsigned int GM_noone() { return -4; }
+constexpr double GM_noone() { return -4.0; }
