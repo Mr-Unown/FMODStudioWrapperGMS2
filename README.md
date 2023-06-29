@@ -3,5 +3,5 @@ FMOD Studio Bindings for GMS2, focused on opening bank files. Can be used in Win
 **Pull Requests Open**
 
 ### Contributors
-MrUnown\
-RadixComet
+MrUnown (Original)\
+RadixComet (via PR)
