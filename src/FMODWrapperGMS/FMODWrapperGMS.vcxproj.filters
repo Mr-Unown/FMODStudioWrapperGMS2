@@ -13,24 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\FMOD GMS">
+      <UniqueIdentifier>{ab3fbc41-d24a-49f2-80c1-52bbed9f3a92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FMOD GMS">
+      <UniqueIdentifier>{5095f4fb-6d46-47b7-b4da-41b82fbfcb65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GMSDefinition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="handler.h">
+    <ClInclude Include="Handler.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bank.h">
+      <Filter>Header Files\FMOD GMS</Filter>
+    </ClInclude>
+    <ClInclude Include="Bus.h">
+      <Filter>Header Files\FMOD GMS</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Header Files\FMOD GMS</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Header Files\FMOD GMS</Filter>
+    </ClInclude>
+    <ClInclude Include="SpatialAudio.h">
+      <Filter>Header Files\FMOD GMS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Bank.cpp">
+      <Filter>Source Files\FMOD GMS</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Bus.cpp">
+      <Filter>Source Files\FMOD GMS</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Source Files\FMOD GMS</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Source Files\FMOD GMS</Filter>
+    </ClCompile>
+    <ClCompile Include="SpatialAudio.cpp">
+      <Filter>Source Files\FMOD GMS</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
