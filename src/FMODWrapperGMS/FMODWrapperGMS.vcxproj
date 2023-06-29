@@ -160,7 +160,6 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="GMSDefinition.h" />
     <ClInclude Include="handler.h" />
-    <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

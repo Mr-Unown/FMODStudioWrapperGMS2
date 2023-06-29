@@ -8,7 +8,7 @@
 #include "GMSDefinition.h"
 
 
-void *extraDriverData = NULL;
+void *extraDriverData = nullptr;
 FMOD_RESULT result;
 
 
@@ -31,18 +31,18 @@ double FMODGMS_Util_ErrorChecker() {
 	}
 }
 
-FMOD::Studio::System* FMODsystem = NULL;
-FMOD::System* lowLevelSystem = NULL;
+FMOD::Studio::System* FMODsystem = nullptr;
+FMOD::System* lowLevelSystem = nullptr;
 FMOD_REVERB_PROPERTIES reverbProperties = FMOD_PRESET_GENERIC; // TO DO: Add customization here.
 
-FMOD::Studio::Bank* bankObject = NULL;
+FMOD::Studio::Bank* bankObject = nullptr;
 Handles< FMOD::Studio::Bank* > BankHandles;
 
-FMOD::Studio::Bus* busObject = NULL;
+FMOD::Studio::Bus* busObject = nullptr;
 Handles< FMOD::Studio::Bus* > BusHandles;
 
-FMOD::Studio::EventDescription* eventDescription = NULL;
-FMOD::Studio::EventInstance* eventInstance = NULL;
+FMOD::Studio::EventDescription* eventDescription = nullptr;
+FMOD::Studio::EventInstance* eventInstance = nullptr;
 Handles< FMOD::Studio::EventInstance* > EventInstHandles;
 FMOD_STUDIO_PLAYBACK_STATE playbackState;
 
