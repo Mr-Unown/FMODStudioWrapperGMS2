@@ -2,21 +2,7 @@
 
 #include "Framework.h"
 
-extern Handles<FMOD::Studio::Bus*> busHandles;
-
-inline FMOD::Studio::Bus* getBusfromHandle(double handle) {
-	auto pointer = busHandles.Get(handle);
-
-	if (pointer == nullptr)
-		return nullptr;
-
-	if (!(*pointer)->isValid())
-	{
-		busHandles.Remove(handle);
-		return nullptr;
-	}
-	return *pointer;
-}
+extern PointerHandleList<FMOD::Studio::Bus> BusHandleList;
 
 // Get Bus Object.
 GM_FUNC double fmod_getBus(const char* path);

@@ -16,7 +16,7 @@
 #include <fmod_errors.h>
 
 #include "GMSDefinition.h"
-#include "Handler.h"
+#include "HandleList.h"
 
 #include <stdio.h>
 #include <iostream>

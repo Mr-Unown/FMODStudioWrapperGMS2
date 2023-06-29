@@ -27,9 +27,6 @@
     <ClInclude Include="GMSDefinition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Handler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Bank.h">
       <Filter>Header Files\FMOD GMS</Filter>
     </ClInclude>
@@ -44,6 +41,9 @@
     </ClInclude>
     <ClInclude Include="SpatialAudio.h">
       <Filter>Header Files\FMOD GMS</Filter>
+    </ClInclude>
+    <ClInclude Include="HandleList.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,11 @@
 #include "Bank.h"
 #include "System.h"
 
-
-Handles<FMOD::Studio::Bank*> bankHandles{ };
+bool bankHandleValidityPredicate(FMOD::Studio::Bank* pointer)
+{
+	return pointer->isValid();
+}
+PointerHandleList<FMOD::Studio::Bank> BankHandleList = PointerHandleList<FMOD::Studio::Bank>(bankHandleValidityPredicate);
 
 double fmod_loadBank(const char* filename) 
 {
@@ -11,12 +14,12 @@ double fmod_loadBank(const char* filename)
 	// RadixComet: I dunno why Unown is getting this?? lmfao
 	auto errorResult = FMODGMS_Util_ErrorChecker(pFMODSystem->loadBankFile(filename, FMOD_STUDIO_LOAD_BANK_NORMAL, &pBank));
 
-	return bankHandles.Add(pBank);
+	return BankHandleList.Add(pBank);
 }
 
 double fmod_bank_loadSampleData(double handle) 
 {
-	FMOD::Studio::Bank* pBank = getBankfromHandle(handle);
+	FMOD::Studio::Bank* pBank = BankHandleList.Get(handle);
 
 	if (pBank == nullptr)
 		return GM_error();

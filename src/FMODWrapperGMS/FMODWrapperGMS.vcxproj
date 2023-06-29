@@ -162,7 +162,7 @@
     <ClInclude Include="Event.h" />
     <ClInclude Include="Framework.h" />
     <ClInclude Include="GMSDefinition.h" />
-    <ClInclude Include="Handler.h" />
+    <ClInclude Include="HandleList.h" />
     <ClInclude Include="SpatialAudio.h" />
     <ClInclude Include="System.h" />
   </ItemGroup>

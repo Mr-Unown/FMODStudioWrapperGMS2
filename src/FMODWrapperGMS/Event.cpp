@@ -1,10 +1,15 @@
 #include "Event.h"
 #include "System.h"
+bool eventInstanceHandleValidityPredicate(FMOD::Studio::EventInstance* pointer)
+{
+	return pointer->isValid();
+}
+FMOD::Studio::EventDescription* pEventDescription = nullptr;
 
-extern FMOD::Studio::EventDescription* pEventDescription = nullptr;
-extern Handles<FMOD::Studio::EventInstance*> eventInstanceHandles{ };
+PointerHandleList<FMOD::Studio::EventInstance> EventInstanceHandleList = PointerHandleList<FMOD::Studio::EventInstance>(eventInstanceHandleValidityPredicate);
 
-extern FMOD_STUDIO_PLAYBACK_STATE playbackState = FMOD_STUDIO_PLAYBACK_STATE::FMOD_STUDIO_PLAYBACK_PLAYING;
+
+FMOD_STUDIO_PLAYBACK_STATE playbackState = FMOD_STUDIO_PLAYBACK_STATE::FMOD_STUDIO_PLAYBACK_PLAYING;
 
 double fmod_createEventInstance(const char* path) 
 {
@@ -13,7 +18,7 @@ double fmod_createEventInstance(const char* path)
 	FMOD::Studio::EventInstance* pInstance = nullptr;
 
 	FMODGMS_Util_ErrorChecker(pEventDescription->createInstance(&pInstance));
-	return eventInstanceHandles.Add(pInstance);
+	return EventInstanceHandleList.Add(pInstance);
 }
 
 double fmod_getEventLength(const char* path) 
@@ -27,7 +32,7 @@ double fmod_getEventLength(const char* path)
 #pragma region Playback
 double fmod_event_play(double handle)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -37,7 +42,7 @@ double fmod_event_play(double handle)
 
 double fmod_event_setPause(double handle, double paused)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -47,7 +52,7 @@ double fmod_event_setPause(double handle, double paused)
 
 double fmod_event_getPause(double handle)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -59,7 +64,7 @@ double fmod_event_getPause(double handle)
 
 double fmod_event_release(double handle)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -68,7 +73,7 @@ double fmod_event_release(double handle)
 
 double fmod_event_stop(double handle, double instant)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -78,24 +83,18 @@ double fmod_event_stop(double handle, double instant)
 
 double fmod_event_getPlaybackState(double handle)
 {
-	auto temp = eventInstanceHandles.Get(handle);
+	auto temp = EventInstanceHandleList.Get(handle);
 	if (temp == nullptr) 
 		return FMOD_STUDIO_PLAYBACK_STOPPED;
 	
-	
-	if (!(*temp)->isValid()) 
-	{
-		eventInstanceHandles.Remove(handle);
-		return FMOD_STUDIO_PLAYBACK_STOPPED;
-	}
-	FMODGMS_Util_ErrorChecker((*temp)->getPlaybackState(&playbackState));
+	FMODGMS_Util_ErrorChecker(temp->getPlaybackState(&playbackState));
 	return playbackState;
 }
 #pragma endregion
 
 double fmod_event_setParameter(double handle, const char* parameterName, double value, double ignoreSeek)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -106,7 +105,7 @@ double fmod_event_setParameter(double handle, const char* parameterName, double 
 double fmod_event_getParameter(double handle, const char* parameterName)
 {
 	float value = 0.0f, finalValue = 0.0f;
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -118,7 +117,7 @@ double fmod_event_getParameter(double handle, const char* parameterName)
 
 double fmod_event_setTimelinePosition(double handle, double timelinePosition)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -129,7 +128,7 @@ double fmod_event_setTimelinePosition(double handle, double timelinePosition)
 double fmod_event_getTimelinePosition(double handle) 
 {
 	int timeline_pos;
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -141,7 +140,7 @@ double fmod_event_getTimelinePosition(double handle)
 
 double fmod_event_setVolume(double handle, double value) 
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -151,7 +150,7 @@ double fmod_event_setVolume(double handle, double value)
 
 double fmod_event_getVolume(double handle) 
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 	float value = 0.0f, finalValue = 0.0f;
 
 	if (pInstance == nullptr)
@@ -164,7 +163,7 @@ double fmod_event_getVolume(double handle)
 
 double fmod_event_setPitch(double handle, double value)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -174,7 +173,7 @@ double fmod_event_setPitch(double handle, double value)
 
 double fmod_event_getPitch(double handle) 
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 	float value = 0.0f, finalValue = 0.0f;
 
 	if (pInstance == nullptr)
@@ -187,7 +186,7 @@ double fmod_event_getPitch(double handle)
 
 double fmod_event_setReverb(double handle, /*double index,*/ double value)
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 
 	if (pInstance == nullptr)
 		return GM_error();
@@ -197,7 +196,7 @@ double fmod_event_setReverb(double handle, /*double index,*/ double value)
 
 double fmod_event_getReverb(double handle/*, double index*/) 
 {
-	auto pInstance = getEventInstancefromHandle(handle);
+	auto pInstance = EventInstanceHandleList.Get(handle);
 	float value = 0.0f;
 
 	if (pInstance == nullptr)

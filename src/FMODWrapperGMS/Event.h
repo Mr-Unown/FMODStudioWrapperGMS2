@@ -3,26 +3,11 @@
 #include "Framework.h"
 
 extern FMOD::Studio::EventDescription* pEventDescription;
-extern Handles<FMOD::Studio::EventInstance*> eventInstanceHandles;
+
+extern PointerHandleList<FMOD::Studio::EventInstance> EventInstanceHandleList;
 
 extern FMOD_STUDIO_PLAYBACK_STATE playbackState;
 
-
-inline FMOD::Studio::EventInstance* getEventInstancefromHandle(double handle)
-{
-	auto pointer = eventInstanceHandles.Get(handle);
-
-	if (pointer == nullptr)
-		return nullptr;
-
-	if (!(*pointer)->isValid())
-	{
-		eventInstanceHandles.Remove(handle);
-		return nullptr;;
-	}
-
-	return *pointer;
-}
 
 // Starts an Event Instance.
 GM_FUNC double fmod_event_play(double handle);

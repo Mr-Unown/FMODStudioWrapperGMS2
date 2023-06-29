@@ -1,19 +1,23 @@
 #include "Bus.h"
 #include "System.h"
 
-Handles<FMOD::Studio::Bus*> busHandles{ };
+bool busHandleValidityPredicate(FMOD::Studio::Bus* pointer)
+{
+	return pointer->isValid();
+}
+PointerHandleList<FMOD::Studio::Bus> BusHandleList = PointerHandleList<FMOD::Studio::Bus>(busHandleValidityPredicate);
 
  double fmod_getBus(const char* path) 
 {
 	FMOD::Studio::Bus* pBus = nullptr;
 
 	FMODGMS_Util_ErrorChecker(pFMODSystem->getBus(path, &pBus));
-	return busHandles.Add(pBus);
+	return BusHandleList.Add(pBus);
 }
 
 double fmod_bus_getVolume(double handle) 
 {
-	auto pBus = getBusfromHandle(handle);
+	auto pBus = BusHandleList.Get(handle);
 	float value = 0.0f;
 	float finalValue = 0.0f;
 
@@ -26,7 +30,7 @@ double fmod_bus_getVolume(double handle)
 
 double fmod_bus_setVolume(double handle, double value) 
 {
-	auto pBus = getBusfromHandle(handle);
+	auto pBus = BusHandleList.Get(handle);
 
 	if (pBus == nullptr)
 		return GM_error();
@@ -36,7 +40,7 @@ double fmod_bus_setVolume(double handle, double value)
 
 double fmod_bus_getMute(double handle) 
 {
-	auto pBus = getBusfromHandle(handle);
+	auto pBus = BusHandleList.Get(handle);
 	bool value = false;
 
 	if (pBus == nullptr)
@@ -48,7 +52,7 @@ double fmod_bus_getMute(double handle)
 
 double fmod_bus_setMute(double handle, double value) 
 {
-	auto pBus = getBusfromHandle(handle);
+	auto pBus = BusHandleList.Get(handle);
 
 	if (pBus == nullptr)
 		return GM_error();

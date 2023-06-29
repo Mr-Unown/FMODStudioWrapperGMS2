@@ -40,9 +40,10 @@ double fmod_event_set3DPosition(double handle, double x, double y, double z)
 		{ 0.0f, 1.0f, 0.0f }  //up
 	};
 	tempListenerAttributes.position = FMOD_VECTOR{ static_cast<float>(x), static_cast<float>(y), static_cast<float>(z) };
-	auto instance = getEventInstancefromHandle(handle);
+	auto instance = EventInstanceHandleList.Get(handle);
 
 	if (instance == nullptr)
 		return GM_error();
+
 	return FMODGMS_Util_ErrorChecker(instance->set3DAttributes(&tempListenerAttributes));
 }

@@ -2,23 +2,7 @@
 
 #include "Framework.h"
 
-extern Handles<FMOD::Studio::Bank*> bankHandles;
-
-inline FMOD::Studio::Bank* getBankfromHandle(double handle)
-{
-	auto pointer = bankHandles.Get(handle);
-
-	if (pointer == nullptr)
-		return nullptr;
-
-	if (!(*pointer)->isValid())
-	{
-		bankHandles.Remove(handle);
-		return nullptr;
-	}
-
-	return *pointer;
-}
+extern PointerHandleList<FMOD::Studio::Bank> BankHandleList;
 
 // Loads an FMOD Bank file.
 GM_FUNC double fmod_loadBank(const char* filename);
