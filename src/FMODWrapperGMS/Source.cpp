@@ -227,11 +227,20 @@ GM_FUNC double fmod_event_play(double handle) {
 	return FMODGMS_Util_ErrorChecker();
 }
 
-// Pauses an Event Instance.
-GM_FUNC double fmod_event_pause(double handle, double paused) {
+// Sets pause state of an Event Instance.
+GM_FUNC double fmod_event_setPause(double handle, double paused) {
 	getEventInstancefromHandle(handle);
 	result = eventInstance->setPaused(paused);
 	return FMODGMS_Util_ErrorChecker();
+}
+
+// Gets pause state of an Event Instance.
+GM_FUNC double fmod_event_getPause(double handle) {
+	getEventInstancefromHandle(handle);
+	bool paused = false;
+	result = eventInstance->getPaused(&paused);
+	FMODGMS_Util_ErrorChecker();
+	return paused;
 }
 
 // Releases an Event Instance. 

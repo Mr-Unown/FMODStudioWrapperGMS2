@@ -16,7 +16,7 @@
   "date": "2023-03-31T09:42:00.9043699+08:00",
   "description": "",
   "exportToGame": true,
-  "extensionVersion": "2.1.1",
+  "extensionVersion": "2.2.0",
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"FMOD_STUDIO_PLAYBACK_PLAYING","hidden":false,"value":"0",},
@@ -93,10 +93,10 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_global_getParameter","argCount":0,"args":[
             1,
           ],"documentation":"","externalName":"fmod_global_getParameter","help":"parameter_name","hidden":false,"kind":1,"returnType":2,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_pause","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_setPause","argCount":0,"args":[
             2,
             2,
-          ],"documentation":"","externalName":"fmod_event_pause","help":"event_handle, paused","hidden":false,"kind":1,"returnType":2,},
+          ],"documentation":"","externalName":"fmod_event_setPause","help":"event_handle, paused","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_release","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"fmod_event_release","help":"event_handle","hidden":false,"kind":1,"returnType":2,},
@@ -138,6 +138,9 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_getPlaybackState","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"fmod_event_getPlaybackState","help":"event_handle","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_getPause","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"fmod_event_getPause","help":"event_handle","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[
         {"name":"fmod_init","path":"extensions/fmodGMS/fmodGMS.yy",},
         {"name":"fmod_create","path":"extensions/fmodGMS/fmodGMS.yy",},
@@ -156,7 +159,7 @@
         {"name":"fmod_global_setParameter","path":"extensions/fmodGMS/fmodGMS.yy",},
         {"name":"fmod_global_getParameter","path":"extensions/fmodGMS/fmodGMS.yy",},
         {"name":"fmod_event_play","path":"extensions/fmodGMS/fmodGMS.yy",},
-        {"name":"fmod_event_pause","path":"extensions/fmodGMS/fmodGMS.yy",},
+        {"name":"fmod_event_setPause","path":"extensions/fmodGMS/fmodGMS.yy",},
         {"name":"fmod_event_set3DPosition","path":"extensions/fmodGMS/fmodGMS.yy",},
         {"name":"fmod_event_release","path":"extensions/fmodGMS/fmodGMS.yy",},
         {"name":"fmod_event_stop","path":"extensions/fmodGMS/fmodGMS.yy",},
