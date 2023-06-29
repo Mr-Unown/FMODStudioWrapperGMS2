@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 
-#include "pch.h"
 #include "handler.h"
 #include "framework.h"
 #include "GMSDefinition.h"
