@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{37f220ae-0284-4721-93cb-3f35cf14e571}">
+		<property name="assetPath">
+			<value>Dispense.flac</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>22.0499992</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.16834467120181407</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{00caf672-3bde-4ee6-b521-7be292627f45}</destination>
+		</relationship>
+	</object>
+</objects>

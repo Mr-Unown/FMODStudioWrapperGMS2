@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{cb98cacd-8935-4414-99ff-bff2ba8f5296}">
+		<property name="assetPath">
+			<value>BombTick.flac</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.46000000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{00caf672-3bde-4ee6-b521-7be292627f45}</destination>
+		</relationship>
+	</object>
+</objects>
