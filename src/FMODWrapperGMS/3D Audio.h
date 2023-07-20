@@ -1,6 +1,6 @@
 #pragma once
 
-#include "framework.h"
+#include "Framework.h"
 
 FMOD_3D_ATTRIBUTES listenerAttributes{
 	{ 0.0f, 0.0f, 0.0f }, //position

@@ -49,7 +49,8 @@ public:
     template<typename Function>
     void ForEach(Function&& func) {
         for (auto& entry : handles) {
-            func(entry.second);
+            std::invoke(std::forward<Function>(func), entry.first);
         }
     }
+
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "framework.h"
+#include "Framework.h"
 
 FMOD::Studio::Bank* bankObject = nullptr;
 Handles< FMOD::Studio::Bank* > BankHandles;

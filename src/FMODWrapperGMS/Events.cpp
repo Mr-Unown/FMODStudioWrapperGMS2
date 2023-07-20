@@ -55,7 +55,7 @@ double fmod_event_stop(double handle, double instant) {
 }
 
 // Setting Event Instance Parameters.
-double fmod_event_setParameter(double handle, const char* parameter_name, double value, double ignoreseek = 0) {
+double fmod_event_setParameter(double handle, const char* parameter_name, double value, double ignoreseek) {
 	getEventInstancefromHandle(handle);
 	result = eventInstance->setParameterByName(parameter_name, value, ignoreseek);
 	return FMODGMS_Util_ErrorChecker();
@@ -159,15 +159,24 @@ double fmod_event_setReverb(double handle, /*double index,*/ double value) {
 
 // Sets pause state of all Event Instances.
 double fmod_event_setPause_all(double paused) {
-
+	EventInstHandles.ForEach([paused](double handle) {
+		fmod_event_setPause(handle, paused);
+		});
+	return GM_true;
 }
 
 // Releases all Event Instances. 
 double fmod_event_release_all() {
-
+	EventInstHandles.ForEach([](double handle) {
+		fmod_event_release(handle);
+		});
+	return GM_true;
 }
 
 // Stops all Event Instances.
 double fmod_event_stop_all(double instant) {
-
+	EventInstHandles.ForEach([instant](double handle) {
+		fmod_event_setPause(handle, instant);
+		});
+	return GM_true;
 }

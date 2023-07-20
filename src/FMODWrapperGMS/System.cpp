@@ -28,7 +28,7 @@ double fmod_release() {
 }
 
 // Setting Global Parameters.
-double fmod_global_setParameter(const char* parameter_name, double value, double ignoreseek = 0) {
+double fmod_global_setParameter(const char* parameter_name, double value, double ignoreseek) {
 	result = FMODsystem->setParameterByName(parameter_name, value, ignoreseek);
 	return FMODGMS_Util_ErrorChecker();
 }

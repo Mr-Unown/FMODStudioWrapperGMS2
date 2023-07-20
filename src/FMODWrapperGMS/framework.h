@@ -9,7 +9,7 @@
 #include <fmod.hpp>
 #include <fmod_studio.hpp>
 #include <fmod_errors.h>
-#include "handler.h"
+#include "Handles.h"
 
 
 #define GM_FUNC extern "C" __declspec (dllexport)

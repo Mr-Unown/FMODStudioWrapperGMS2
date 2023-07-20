@@ -3,7 +3,7 @@
 #include "3D Audio.h"
 
 // Set audio listener position.
-double fmod_listener_setPosition(double listener, double x, double y, double z = 0) {
+double fmod_listener_setPosition(double listener, double x, double y, double z) {
 	listenerAttributes.position = FMOD_VECTOR{ static_cast<float>(x), static_cast<float>(y), static_cast<float>(z) };
 	result = FMODsystem->setListenerAttributes(listener, &listenerAttributes, nullptr);
 	return FMODGMS_Util_ErrorChecker();

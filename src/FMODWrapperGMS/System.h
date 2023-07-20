@@ -1,6 +1,6 @@
 #pragma once
 
-#include "framework.h"
+#include "Framework.h"
 
 FMOD::Studio::System* FMODsystem = nullptr;
 FMOD::System* lowLevelSystem = nullptr;

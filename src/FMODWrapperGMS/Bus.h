@@ -1,5 +1,5 @@
 #pragma once
-#include "framework.h"
+#include "Framework.h"
 
 FMOD::Studio::Bus* busObject = nullptr;
 Handles< FMOD::Studio::Bus* > BusHandles;
@@ -12,6 +12,7 @@ GM_FUNC double fmod_bus_getVolume(double handle);
 
 // Set Bus Volume. 
 GM_FUNC double fmod_bus_setVolume(double handle, double value);
+
 // Get Bus Mute Status. 
 GM_FUNC double fmod_bus_getMute(double handle);
 

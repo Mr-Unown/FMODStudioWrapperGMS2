@@ -1,6 +1,6 @@
 #pragma once
 
-#include "framework.h"
+#include "Framework.h"
 
 FMOD::Studio::EventDescription* eventDescription = nullptr;
 FMOD::Studio::EventInstance* eventInstance = nullptr;
@@ -65,7 +65,7 @@ GM_FUNC double fmod_event_setReverb(double handle, /*double index,*/ double valu
 GM_FUNC double fmod_event_setPause_all(double paused);
 
 // Releases all Event Instances. 
-GM_FUNC double fmod_event_release_all(double handle);
+GM_FUNC double fmod_event_release_all();
 
 // Stops all Event Instances.
 GM_FUNC double fmod_event_stop_all(double instant);
