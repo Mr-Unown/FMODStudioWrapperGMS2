@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Helper Scripts",
-    "path": "folders/Extensions/FMODGMS/Helper Scripts.yy",
+    "path": "folders/FMODGMS/Helper Scripts.yy",
   },
 }

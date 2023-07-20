@@ -4,4 +4,5 @@ fmod_event_play(bombtickingsnd)
 scr_collision_init();
 terminalVelocity = 7;
 grav = 0.25;
-timer = 160;
+timerMax = 160;
+timer = timerMax;
