@@ -1,0 +1,35 @@
+{
+  "resourceType": "GMProject",
+  "resourceVersion": "1.7",
+  "name": "gms2proj",
+  "AudioGroups": [
+    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
+  ],
+  "configs": {
+    "children": [],
+    "name": "Default",
+  },
+  "defaultScriptType": 1,
+  "Folders": [
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"FMODGMS","folderPath":"folders/FMODGMS.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Helper Scripts","folderPath":"folders/FMODGMS/Helper Scripts.yy",},
+  ],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"fmod.dll","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"fmodstudio.dll","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README (Important License Stuff).txt","CopyToMask":-1,"filePath":"datafiles",},
+  ],
+  "isEcma": false,
+  "LibraryEmitters": [],
+  "MetaData": {
+    "IDEVersion": "2023.6.0.89",
+  },
+  "resources": [
+    {"id":{"name":"scr_fmodUtility","path":"scripts/scr_fmodUtility/scr_fmodUtility.yy",},},
+    {"id":{"name":"fmodGMS2","path":"extensions/fmodGMS2/fmodGMS2.yy",},},
+  ],
+  "RoomOrderNodes": [],
+  "TextureGroups": [
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+  ],
+}

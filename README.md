@@ -1,5 +1,8 @@
 # FMODStudioWrapperGMS2
 FMOD Studio Bindings for GMS2, focused on opening bank files. Can be used in Windows games.
 
-This is my first C++ project and my first public repo.
-If you have any suggestions for improvement, please make a Pull Request.
+Pull Requests Open.
+
+//Special Thanks//
+core, scout, lerp, marioket, and many others for the support and encouragement, whether by testing, making suggestions, or by simply hearing me out.
+
