@@ -1,8 +1,8 @@
 #pragma once
 #include "Framework.h"
 
-FMOD::Studio::Bus* busObject = nullptr;
-Handles< FMOD::Studio::Bus* > BusHandles;
+extern FMOD::Studio::Bus* busObject;
+extern Handles< FMOD::Studio::Bus* > BusHandles;
 
 // Get Bus Object.
 GM_FUNC double fmod_getBus(const char* path);

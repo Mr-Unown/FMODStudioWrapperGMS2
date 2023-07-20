@@ -1,5 +1,12 @@
 #include "System.h"
 
+FMOD::Studio::System* FMODsystem = nullptr;
+FMOD::System* lowLevelSystem = nullptr;
+FMOD_REVERB_PROPERTIES reverbProperties = FMOD_PRESET_GENERIC;
+void* extraDriverData = nullptr;
+
+
+
 // Creates the FMOD System.
 double fmod_create() {
 	result = FMOD::Studio::System::create(&FMODsystem);

@@ -1,6 +1,11 @@
 #include "System.h"
 #include "Bus.h"
 
+FMOD::Studio::Bus* busObject = nullptr;
+Handles< FMOD::Studio::Bus* > BusHandles;
+
+
+
 // Get Bus Object.
 GM_FUNC double fmod_getBus(const char* path) {
 	result = FMODsystem->getBus(path, &busObject);

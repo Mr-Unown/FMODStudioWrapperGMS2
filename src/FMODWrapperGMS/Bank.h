@@ -2,8 +2,8 @@
 
 #include "Framework.h"
 
-FMOD::Studio::Bank* bankObject = nullptr;
-Handles< FMOD::Studio::Bank* > BankHandles;
+extern FMOD::Studio::Bank* bankObject;
+extern Handles< FMOD::Studio::Bank* > BankHandles;
 
 // Loads an FMOD Bank file.
 GM_FUNC double fmod_loadBank(const char* filename);

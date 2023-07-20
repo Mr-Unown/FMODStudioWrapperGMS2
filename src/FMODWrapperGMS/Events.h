@@ -2,10 +2,10 @@
 
 #include "Framework.h"
 
-FMOD::Studio::EventDescription* eventDescription = nullptr;
-FMOD::Studio::EventInstance* eventInstance = nullptr;
-Handles< FMOD::Studio::EventInstance* > EventInstHandles;
-FMOD_STUDIO_PLAYBACK_STATE playbackState;
+extern FMOD::Studio::EventDescription* eventDescription;
+extern FMOD::Studio::EventInstance* eventInstance;
+extern Handles< FMOD::Studio::EventInstance* > EventInstHandles;
+extern FMOD_STUDIO_PLAYBACK_STATE playbackState;
 
 // Creates an Event Instance.
 GM_FUNC double fmod_createEventInstance(const char* path);

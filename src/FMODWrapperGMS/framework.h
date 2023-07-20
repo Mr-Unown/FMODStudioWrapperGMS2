@@ -19,22 +19,18 @@
 #define GM_error -1;
 #define GM_noone -4;
 
-void* extraDriverData = nullptr;
-FMOD_RESULT result;
+
+
 
 // Helper function.
 // This converts FMOD Results to error message strings and returns GM_true (1.0) if 
 // the Result is FMOD_OK and GM_error (-1) otherwise.
-double FMODGMS_Util_ErrorChecker() {
+inline double FMODGMS_Util_ErrorChecker(const FMOD_RESULT& result) {
 	const char* errorMessage = FMOD_ErrorString(result);
 
 	if (result != FMOD_OK) {
-		//const char text = "FMOD error!(% d) % s\n" + errorMessage;
 		std::cout << "FMOD error!(% d) % s\n" << errorMessage << std::endl;
-
 		return GM_error;
-	}
-	else {
-		return GM_true;
-	}
+	} 
+	return GM_true;
 }

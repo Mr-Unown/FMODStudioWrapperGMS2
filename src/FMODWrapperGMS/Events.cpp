@@ -1,6 +1,13 @@
 #include "System.h"
 #include "Events.h"
 
+FMOD::Studio::EventDescription* eventDescription = nullptr;
+FMOD::Studio::EventInstance* eventInstance = nullptr;
+Handles< FMOD::Studio::EventInstance* > EventInstHandles;
+FMOD_STUDIO_PLAYBACK_STATE playbackState;
+
+
+
 // Creates an Event Instance.
 double fmod_createEventInstance(const char* path) {
 	FMODsystem->getEvent(path, &eventDescription);

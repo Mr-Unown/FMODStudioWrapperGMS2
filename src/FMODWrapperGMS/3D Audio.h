@@ -2,12 +2,7 @@
 
 #include "Framework.h"
 
-FMOD_3D_ATTRIBUTES listenerAttributes{
-	{ 0.0f, 0.0f, 0.0f }, //position
-	{ 0.0f, 0.0f, 0.0f }, //velocity
-	{ 0.0f, 0.0f, 1.0f }, //forward
-	{ 0.0f, 1.0f, 0.0f }  //up
-};
+extern FMOD_3D_ATTRIBUTES listenerAttributes;
 
 // Set audio listener position.
 GM_FUNC double fmod_listener_setPosition(double listener, double x, double y, double z = 0);
