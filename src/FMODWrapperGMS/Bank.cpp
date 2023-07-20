@@ -6,7 +6,7 @@ Handles< FMOD::Studio::Bank* > BankHandles;
 
 
 // Loads an FMOD Bank file.
-double fmod_loadBank(const char* filename) {
+double fmod_loadBank(const char* filename) { 
 	FMODGMS_Util_ErrorChecker(FMODsystem->loadBankFile(filename, FMOD_STUDIO_LOAD_BANK_NORMAL, &bankObject));
 	return BankHandles.Add(bankObject);
 }

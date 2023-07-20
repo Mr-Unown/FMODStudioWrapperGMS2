@@ -24,7 +24,7 @@
 
 // Helper function.
 // This converts FMOD Results to error message strings and returns GM_true (1.0) if 
-// the Result is FMOD_OK and GM_error (-1) otherwise.
+// the result is FMOD_OK and GM_error (-1) otherwise.
 inline double FMODGMS_Util_ErrorChecker(const FMOD_RESULT& result) {
 	const char* errorMessage = FMOD_ErrorString(result);
 
