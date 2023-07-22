@@ -22,4 +22,4 @@ Pull Requests Open.
 
 [@marioket](https://github.com/marioket)
 
-[@RadixComet](https://github.com/RadixCome)
+[@radixcomet](https://github.com/RadixCome)
