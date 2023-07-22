@@ -5,3 +5,14 @@ Pull Requests Open.
 
 ## Special Thanks
 [@coretheguy](https://github.com/coretheguy), [@scoutthesnow](https://github.com/scoutthesnow), [@lerp32](https://github.com/lerp32), [@marioket](https://github.com/marioket), and many others for the support and encouragement, whether by testing, making suggestions, or by simply hearing me out.
+
+
+
+
+
+## Credits
+[@coretheguy](https://github.com/coretheguy)
+[@scoutthesnow](https://github.com/scoutthesnow)
+[@lerp32](https://github.com/lerp32)
+[@marioket](https://github.com/marioket)
+[@RadixComet](https://github.com/RadixCome)
