@@ -12,7 +12,11 @@ Pull Requests Open.
 
 ## Credits
 [@coretheguy](https://github.com/coretheguy)
+
 [@scoutthesnow](https://github.com/scoutthesnow)
+
 [@lerp32](https://github.com/lerp32)
+
 [@marioket](https://github.com/marioket)
+
 [@RadixComet](https://github.com/RadixCome)
