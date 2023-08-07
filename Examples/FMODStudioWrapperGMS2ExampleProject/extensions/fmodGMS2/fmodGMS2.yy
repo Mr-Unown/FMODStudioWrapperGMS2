@@ -16,7 +16,7 @@
   "date": "2023-03-31T09:42:00.9043699+08:00",
   "description": "",
   "exportToGame": true,
-  "extensionVersion": "3.0.0",
+  "extensionVersion": "3.1.0",
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"FMOD_STUDIO_PLAYBACK_PLAYING","hidden":false,"value":"0",},

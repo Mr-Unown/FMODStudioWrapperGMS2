@@ -17,14 +17,14 @@
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"fmod.dll","CopyToMask":-1,"filePath":"datafiles",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"fmodstudio.dll","CopyToMask":-1,"filePath":"datafiles",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README (Important License Stuff).txt","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
+    {"id":{"name":"License","path":"notes/License/License.yy",},},
     {"id":{"name":"scr_fmodUtility","path":"scripts/scr_fmodUtility/scr_fmodUtility.yy",},},
     {"id":{"name":"fmodGMS2","path":"extensions/fmodGMS2/fmodGMS2.yy",},},
   ],

@@ -1,5 +1,6 @@
 {
   "FolderOrderSettings": [
+    {"name":"FMODGMS","order":4,"path":"folders/FMODGMS.yy",},
     {"name":"Objects","order":2,"path":"folders/Objects.yy",},
     {"name":"Collision","order":1,"path":"folders/Objects/Unown Collisions/Collision.yy",},
     {"name":"Parents","order":2,"path":"folders/Objects/Unown Collisions/Parents.yy",},
@@ -8,7 +9,6 @@
     {"name":"Unown Collisions","order":1,"path":"folders/Scripts/Unown Collisions.yy",},
     {"name":"Important Scripts","order":1,"path":"folders/Scripts/Unown Collisions/Important Scripts.yy",},
     {"name":"Misc Scripts","order":2,"path":"folders/Scripts/Unown Collisions/Misc Scripts.yy",},
-    {"name":"FMODGMS","order":4,"path":"folders/FMODGMS.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"bg_pipes","order":8,"path":"sprites/bg_pipes/bg_pipes.yy",},
@@ -22,7 +22,6 @@
     {"name":"obj_fmod","order":9,"path":"objects/obj_fmod/obj_fmod.yy",},
     {"name":"spr_robo_walk","order":2,"path":"sprites/spr_robo_walk/spr_robo_walk.yy",},
     {"name":"spr_robo_bombdispense","order":5,"path":"sprites/spr_robo_bombdispense/spr_robo_bombdispense.yy",},
-    {"name":"fmodGMS2","order":1,"path":"extensions/fmodGMS2/fmodGMS2.yy",},
     {"name":"obj_startupfade","order":7,"path":"objects/obj_startupfade/obj_startupfade.yy",},
     {"name":"obj_debris","order":5,"path":"objects/obj_debris/obj_debris.yy",},
     {"name":"spr_explosion","order":9,"path":"sprites/spr_explosion/spr_explosion.yy",},
@@ -30,8 +29,10 @@
     {"name":"spr_unownPixel","order":2,"path":"sprites/spr_unownPixel/spr_unownPixel.yy",},
     {"name":"obj_solid","order":6,"path":"objects/obj_solid/obj_solid.yy",},
     {"name":"event_play_at","order":2,"path":"scripts/event_play_at/event_play_at.yy",},
+    {"name":"License","order":2,"path":"notes/License/License.yy",},
     {"name":"spr_robo_crouchend","order":13,"path":"sprites/spr_robo_crouchend/spr_robo_crouchend.yy",},
     {"name":"spr_debris","order":12,"path":"sprites/spr_debris/spr_debris.yy",},
+    {"name":"fmodGMS2","order":1,"path":"extensions/fmodGMS2/fmodGMS2.yy",},
     {"name":"spr_credits","order":15,"path":"sprites/spr_credits/spr_credits.yy",},
     {"name":"spr_unownPlatform","order":3,"path":"sprites/spr_unownPlatform/spr_unownPlatform.yy",},
     {"name":"obj_movingPlatformTrigger","order":1,"path":"objects/obj_movingPlatformTrigger/obj_movingPlatformTrigger.yy",},
