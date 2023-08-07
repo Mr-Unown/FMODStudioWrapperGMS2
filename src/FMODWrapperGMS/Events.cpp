@@ -166,7 +166,7 @@ double fmod_event_release_all() {
 // Stops all Event Instances.
 double fmod_event_stop_all(double instant) {
 	EventInstHandles.ForEach([instant](double handle) {
-		fmod_event_setPause(handle, instant);
+		fmod_event_stop(handle, instant);
 		});
 	return GM_true;
 }
