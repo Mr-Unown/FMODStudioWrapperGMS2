@@ -2,6 +2,7 @@
 
 #include "Framework.h"
 
+
 extern FMOD::Studio::EventDescription* eventDescription;
 extern FMOD::Studio::EventInstance* eventInstance;
 extern Handles< FMOD::Studio::EventInstance* > EventInstHandles;
@@ -15,6 +16,9 @@ GM_FUNC double fmod_getEventLength(const char* path);
 
 // Starts an Event Instance.
 GM_FUNC double fmod_event_play(double handle);
+
+// Getting Event Instance Path.
+GM_FUNC char* fmod_event_getEventPath(double handle);
 
 // Sets pause state of an Event Instance.
 GM_FUNC double fmod_event_setPause(double handle, double paused);
@@ -69,6 +73,8 @@ GM_FUNC double fmod_event_release_all();
 
 // Stops all Event Instances.
 GM_FUNC double fmod_event_stop_all(double instant);
+
+
 
 
 // Inline Function.

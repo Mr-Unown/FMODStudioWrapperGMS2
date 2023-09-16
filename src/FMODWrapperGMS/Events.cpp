@@ -29,6 +29,15 @@ double fmod_event_play(double handle) {
 	return FMODGMS_Util_ErrorChecker(eventInstance->start());
 }
 
+// Getting Event Instance Path.
+char* fmod_event_getEventPath(double handle) { // Unown: There will be an error at some point here. I bet.
+	char eventPath[256];
+	int retrieved;
+	getEventInstancefromHandle(handle);
+	eventInstance->getDescription(&eventDescription);
+	eventDescription->getPath(eventPath, sizeof(eventPath), &retrieved);
+	return eventPath;
+}
 // Sets pause state of an Event Instance.
 double fmod_event_setPause(double handle, double paused) {
 	getEventInstancefromHandle(handle);
@@ -170,3 +179,4 @@ double fmod_event_stop_all(double instant) {
 		});
 	return GM_true;
 }
+

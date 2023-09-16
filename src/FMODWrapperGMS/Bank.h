@@ -11,6 +11,9 @@ GM_FUNC double fmod_loadBank(const char* filename);
 // Loads FMOD Bank file Sample Data.
 GM_FUNC double fmod_bank_loadSampleData(double handle);
 
+// Returns a ds_list of every single event path within a bank file.
+GM_FUNC char* fmod_bank_listEventPath(double handle);
+
 // Inline Function.
 inline double getBankfromHandle(double handle) {
 	auto temp = BankHandles.Get(handle); 
