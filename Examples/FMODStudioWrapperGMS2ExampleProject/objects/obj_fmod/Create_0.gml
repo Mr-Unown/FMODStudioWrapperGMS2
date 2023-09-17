@@ -1,4 +1,4 @@
- show_debug_message("Created :  " + string(fmod_create()));
+show_debug_message("Created :  " + string(fmod_create()));
 show_debug_message("Initialized :  " + string(fmod_init(32)));
 
 var banks = 
@@ -10,11 +10,9 @@ var banks =
 ]
 
 for (var i = 0; i < array_length(banks); i++) {
-    var b = (working_directory + banks[i]);
+	var b = (working_directory + banks[i]);
 	var load_bank = fmod_loadBank(b);
-    show_debug_message(string(banks[i]) + " :  "  + string(load_bank));
-	fmod_loadBank(load_bank);
-	
+	show_debug_message(string(banks[i]) + " :  "  + string(load_bank));
 }
 
 z = 0;
