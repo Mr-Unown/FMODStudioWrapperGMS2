@@ -1,5 +1,7 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Example Object","order":1,"path":"folders/Example Object.yy",},
+  ],
   "ResourceOrderSettings": [
     {"name":"License","order":1,"path":"notes/License/License.yy",},
   ],

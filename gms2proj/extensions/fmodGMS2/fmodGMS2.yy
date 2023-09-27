@@ -16,7 +16,7 @@
   "date": "2023-03-31T09:42:00.9043699+08:00",
   "description": "",
   "exportToGame": true,
-  "extensionVersion": "3.5.0",
+  "extensionVersion": "3.6.0",
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"FMOD_STUDIO_PLAYBACK_PLAYING","hidden":false,"value":"0",},
@@ -24,6 +24,13 @@
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"FMOD_STUDIO_PLAYBACK_STOPPED","hidden":false,"value":"2",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"FMOD_STUDIO_PLAYBACK_STARTING","hidden":false,"value":"3",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"FMOD_STUDIO_PLAYBACK_STOPPING","hidden":false,"value":"4",},
+        {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_NORMAL","hidden":false,"value":"0x00000000",},
+        {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_LIVEUPDATE","hidden":false,"value":"0x00000001",},
+        {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_ALLOW_MISSING_PLUGINS","hidden":false,"value":"0x00000002",},
+        {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_SYNCHRONOUS_UPDATE","hidden":false,"value":"0x00000004",},
+        {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_DEFERRED_CALLBACKS","hidden":false,"value":"0x00000008",},
+        {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_LOAD_FROM_UPDATE","hidden":false,"value":"0x00000010",},
+        {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_MEMORY_TRACKING","hidden":false,"value":"0x00000020",},
       ],"copyToTargets":3026418971067810030,"filename":"FMODWrapperGMS.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_init","argCount":0,"args":[
             2,
