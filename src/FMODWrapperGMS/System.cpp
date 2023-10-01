@@ -13,7 +13,7 @@ double fmod_create() {
 }
 
 // Initializes the FMOD System.
-double fmod_init(double numberofchannels, double studioInitFlags = FMOD_STUDIO_INIT_NORMAL) {
+double fmod_init(double numberofchannels, double studioInitFlags) {
 	FMOD_RESULT result = FMODsystem->initialize(numberofchannels, studioInitFlags, FMOD_INIT_NORMAL, extraDriverData);
 	FMODsystem->getCoreSystem(&lowLevelSystem);
 	lowLevelSystem->setReverbProperties(0, &reverbProperties);

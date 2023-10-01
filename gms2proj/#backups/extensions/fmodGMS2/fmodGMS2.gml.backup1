@@ -1,10 +1,10 @@
+// 2023-10-01 20:18:05
 #define fmod_init
 /// @param numberofchannels
 /// @param studioInitFlags=STUDIO_INIT_NORMAL;
 /// @param {real} numberofchannels
 /// @param {real} studioInitFlags
-var numberofchannels = argument[0];
-var studioInitFlags = argument_count > 1 ? argument[1] : STUDIO_INIT_NORMAL;;
+#args numberofchannels, studioInitFlags = STUDIO_INIT_NORMAL;
 // if (argument_count >= 2) {
 // 	studioInitFlags = argument[1];
 // }
@@ -36,8 +36,7 @@ return ds_list_size(argument0);
 /// @param {any*} y 
 /// @param {any*} [z] 
 
-var listener = argument[0], xx = argument[1], yy = argument[2];
-var zz = argument_count > 3 ? argument[3] : 0;;
+#args listener, xx, yy, zz = 0;
 // if (argument_count >= 4) {
 // 	zz = argument[3];
 // }
@@ -81,8 +80,7 @@ return listener_velocity;
 /// @param xx
 /// @param yy
 /// @param zz=0;
-var event_handle = argument[0], xx = argument[1], yy = argument[2];
-var zz = argument_count > 3 ? argument[3] : 0;;
+#args event_handle, xx, yy, zz = 0;
 // if (argument_count >= 4) {
 // 	zz = argument[3];
 // }

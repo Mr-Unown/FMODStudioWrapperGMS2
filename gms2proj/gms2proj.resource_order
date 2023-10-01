@@ -4,5 +4,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"License","order":1,"path":"notes/License/License.yy",},
+    {"name":"obj_soundTest","order":3,"path":"objects/obj_soundTest/obj_soundTest.yy",},
+    {"name":"rm_example","order":2,"path":"rooms/rm_example/rm_example.yy",},
   ],
 }

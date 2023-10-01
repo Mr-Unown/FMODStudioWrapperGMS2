@@ -16,7 +16,7 @@
   "date": "2023-03-31T09:42:00.9043699+08:00",
   "description": "",
   "exportToGame": true,
-  "extensionVersion": "3.6.0",
+  "extensionVersion": "3.7.0",
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"FMOD_STUDIO_PLAYBACK_PLAYING","hidden":false,"value":"0",},
@@ -32,12 +32,13 @@
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_LOAD_FROM_UPDATE","hidden":false,"value":"0x00000010",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"STUDIO_INIT_MEMORY_TRACKING","hidden":false,"value":"0x00000020",},
       ],"copyToTargets":3026418971067810030,"filename":"FMODWrapperGMS.dll","final":"","functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_init","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"___INTERNAL_fmod_init","argCount":0,"args":[
             2,
-          ],"documentation":"","externalName":"fmod_init","help":"fmod_init(numberofchannels)","hidden":false,"kind":1,"returnType":2,},
+            2,
+          ],"documentation":"","externalName":"fmod_init","help":"___INTERNAL_fmod_init(numberofchannels, studioInitFlags)","hidden":true,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_loadBank","argCount":0,"args":[
             1,
-          ],"documentation":"","externalName":"fmod_loadBank","help":"fmod_loadBank(path)","hidden":false,"kind":1,"returnType":2,},
+          ],"documentation":"","externalName":"fmod_loadBank","help":"fmod_loadBank(bank_path)","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_play","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"fmod_event_play","help":"fmod_event_play(event_handle)","hidden":false,"kind":1,"returnType":2,},
@@ -85,12 +86,12 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"___INTERNAL_fmod_listener_getPosition","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"fmod_listener_getPosition","help":"___INTERNAL_fmod_listener_getPosition(listener)","hidden":true,"kind":11,"returnType":1,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_set3DPosition","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"___INTERNAL_fmod_event_set3DPosition","argCount":0,"args":[
             2,
             2,
             2,
             2,
-          ],"documentation":"","externalName":"fmod_event_set3DPosition","help":"fmod_event_set3DPosition(event_handle, x, y, z)","hidden":false,"kind":1,"returnType":2,},
+          ],"documentation":"","externalName":"fmod_event_set3DPosition","help":"___INTERNAL_fmod_event_set3DPosition(event_handle, x, y, z)","hidden":true,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_release","argCount":0,"args":[],"documentation":"","externalName":"fmod_release","help":"fmod_release()","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_global_setParameter","argCount":0,"args":[
             1,
@@ -161,8 +162,29 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"___INTERNAL_fmod_bank_listEventPath","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"fmod_bank_listEventPath","help":"___INTERNAL_fmod_bank_listEventPath(id, bank_handle)","hidden":true,"kind":11,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"___INTERNAL_fmod_listener_getVelocity","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"fmod_listener_getVelocity","help":"___INTERNAL_fmod_listener_getVelocity(listener)","hidden":true,"kind":1,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"___INTERNAL_fmod_event_get3DPosition","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"fmod_event_get3DPosition","help":"___INTERNAL_fmod_event_get3DPosition(event_handle)","hidden":true,"kind":1,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_listener_setVelocity","argCount":0,"args":[
+            2,
+            2,
+            2,
+            2,
+          ],"documentation":"","externalName":"fmod_listener_setVelocity","help":"fmod_listener_setVelocity(listener, x, y, [z])","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_set3DVelocity","argCount":0,"args":[
+            2,
+            2,
+            2,
+            2,
+          ],"documentation":"","externalName":"fmod_event_set3DVelocity","help":"fmod_event_set3DVelocity(event_handle, x, y, z)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"___INTERNAL_fmod_event_get3DVelocity","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"fmod_event_get3DVelocity","help":"___INTERNAL_fmod_event_get3DVelocity(event_handle)","hidden":true,"kind":1,"returnType":1,},
       ],"init":"","kind":1,"order":[
-        {"name":"fmod_init","path":"extensions/fmodGMS2/fmodGMS2.yy",},
+        {"name":"___INTERNAL_fmod_init","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_loadBank","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_event_play","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_update","path":"extensions/fmodGMS2/fmodGMS2.yy",},
@@ -178,7 +200,6 @@
         {"name":"fmod_event_getParameter","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"___INTERNAL_fmod_listener_setPosition","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"___INTERNAL_fmod_listener_getPosition","path":"extensions/fmodGMS2/fmodGMS2.yy",},
-        {"name":"fmod_event_set3DPosition","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_release","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_global_setParameter","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_global_getParameter","path":"extensions/fmodGMS2/fmodGMS2.yy",},
@@ -189,6 +210,7 @@
         {"name":"fmod_event_getTimelinePosition","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_event_getVolume","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_event_setVolume","path":"extensions/fmodGMS2/fmodGMS2.yy",},
+        {"name":"___INTERNAL_fmod_event_set3DPosition","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_event_getPitch","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_event_setPitch","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_event_getReverb","path":"extensions/fmodGMS2/fmodGMS2.yy",},
@@ -201,6 +223,8 @@
         {"name":"fmod_event_stop_all","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"fmod_event_getEventPath","path":"extensions/fmodGMS2/fmodGMS2.yy",},
         {"name":"___INTERNAL_fmod_bank_listEventPath","path":"extensions/fmodGMS2/fmodGMS2.yy",},
+        {"name":"fmod_event_get3DPosition","path":"extensions/fmodGMS2/fmodGMS2.yy",},
+        {"name":"___INTERNAL_fmod_listener_getVelocity","path":"extensions/fmodGMS2/fmodGMS2.yy",},
       ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"fmodGMS2.gml","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_bank_listEventPath","argCount":2,"args":[
@@ -210,12 +234,31 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_listener_getPosition","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"fmod_listener_getPosition","help":"fmod_listener_getPosition(listener)","hidden":false,"kind":2,"returnType":2,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_listener_setPosition","argCount":-1,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_listener_setPosition","argCount":4,"args":[
             2,
             2,
             2,
             2,
           ],"documentation":"","externalName":"fmod_listener_setPosition","help":"fmod_listener_setPosition(listener, x, y, [z])","hidden":false,"kind":2,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_init","argCount":2,"args":[
+            2,
+            2,
+          ],"documentation":"","externalName":"fmod_init","help":"fmod_init(numberofchannels, [studioInitFlags])","hidden":false,"kind":2,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_set3DPosition","argCount":0,"args":[
+            2,
+            2,
+            2,
+            2,
+          ],"documentation":"","externalName":"fmod_event_set3DPosition","help":"fmod_event_set3DPosition(event_handle, x, y, z)","hidden":false,"kind":2,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_get3DPosition","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"fmod_event_get3DPosition","help":"fmod_event_get3DPosition(event_handle)","hidden":false,"kind":2,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_listener_getVelocity","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"fmod_listener_getVelocity","help":"fmod_listener_getVelocity(listener)","hidden":false,"kind":2,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"fmod_event_get3DVelocity","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"fmod_event_get3DVelocity","help":"fmod_event_get3DVelocity(event_handle)","hidden":false,"kind":2,"returnType":2,},
       ],"init":"","kind":2,"order":[
         {"name":"fmod_bank_listEventPath","path":"extensions/fmodGMS2/fmodGMS2.yy",},
       ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
