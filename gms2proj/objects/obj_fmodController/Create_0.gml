@@ -35,4 +35,3 @@ for (var i = 0; i < array_length(global.BankArray); i++) {
 	fmod_bank_listEventPath(global.EventList, global.BankArray[i]);
 }
 
-instance_create_depth(0,0, -5, obj_soundTest);

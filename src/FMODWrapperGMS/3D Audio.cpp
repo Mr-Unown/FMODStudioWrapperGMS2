@@ -13,6 +13,7 @@ FMOD_3D_ATTRIBUTES listenerAttributes{
 
 // Set audio listener position.
 double fmod_listener_setPosition(double listener, double x, double y, double z) {
+	FMOD_RESULT result = FMODsystem->getListenerAttributes(listener, &listenerAttributes, nullptr);
 	listenerAttributes.position = FMOD_VECTOR{ static_cast<float>(x), static_cast<float>(y), static_cast<float>(z) };
 	return FMODGMS_Util_ErrorChecker(FMODsystem->setListenerAttributes(listener, &listenerAttributes, nullptr));
 }
@@ -37,6 +38,7 @@ char* fmod_listener_getPosition(double listener) {
 
 // Set audio listener velocity.
 double fmod_listener_setVelocity(double listener, double x, double y, double z) {
+	FMOD_RESULT result = FMODsystem->getListenerAttributes(listener, &listenerAttributes, nullptr);
 	listenerAttributes.velocity = FMOD_VECTOR{ static_cast<float>(x), static_cast<float>(y), static_cast<float>(z) };
 	return FMODGMS_Util_ErrorChecker(FMODsystem->setListenerAttributes(listener, &listenerAttributes, nullptr));
 }
@@ -63,8 +65,9 @@ char* fmod_listener_getVelocity(double listener) {
 // Set Event Instance 3D position.
 double fmod_event_set3DPosition(double handle, double x, double y, double z) {
 	FMOD_3D_ATTRIBUTES tempListenerAttributes;
-	tempListenerAttributes.position = FMOD_VECTOR{ static_cast<float>(x), static_cast<float>(y), static_cast<float>(z) };
 	getEventInstancefromHandle(handle);
+	eventInstance->get3DAttributes(&tempListenerAttributes);
+	tempListenerAttributes.position = FMOD_VECTOR{ static_cast<float>(x), static_cast<float>(y), static_cast<float>(z) };
 	return FMODGMS_Util_ErrorChecker(eventInstance->set3DAttributes(&tempListenerAttributes));
 }
 
@@ -92,8 +95,10 @@ char* fmod_event_get3DPosition(double handle) {
 // Set Event Instance 3D velocity.
 double fmod_event_set3DVelocity(double handle, double x, double y, double z) {
 	FMOD_3D_ATTRIBUTES tempListenerAttributes;
-	tempListenerAttributes.velocity = FMOD_VECTOR{ static_cast<float>(x), static_cast<float>(y), static_cast<float>(z) };
 	getEventInstancefromHandle(handle);
+	eventInstance->get3DAttributes(&tempListenerAttributes); 
+	tempListenerAttributes.velocity = FMOD_VECTOR{ static_cast<float>(x), static_cast<float>(y), static_cast<float>(z) };
+
 	return FMODGMS_Util_ErrorChecker(eventInstance->set3DAttributes(&tempListenerAttributes));
 }
 
